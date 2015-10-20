@@ -12,8 +12,10 @@ class Walmart
 
     parsed_response = JSON.parse(res.body)    
 
+    puts parsed_response.inspect
+
     parsed_response["reviews"].map do |r|
       r["reviewText"]
-    end
+    end unless parsed_response["reviews"].empty?
   end
 end
