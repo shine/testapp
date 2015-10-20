@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
     @product.save!
 
-    redirect_to products_path
+    redirect_to product_path(@product)
   end
 
   private
