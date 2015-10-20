@@ -1,0 +1,8 @@
+<ul>
+  <li>Name: <%= @product.name %></li>
+  <li>Description: <%= @product.description %></li>
+  <li><%= @product.reviews.count %> reviews:</li>
+  <% @product.reviews.each do |r| %>
+    <li><%= r.text %></li>
+  <% end %>
+</ul>

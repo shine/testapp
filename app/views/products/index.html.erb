@@ -1,0 +1,10 @@
+<table>
+  <% @products.each do |p| %>
+    <tr>
+      <td><%= p.name %></td>
+      <td><%= p.description %><td>
+      <td><%= link_to 'Details', product_path(p) %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'Add product', new_product_path %>
